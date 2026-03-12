@@ -27,7 +27,7 @@ def tStamp_button():
 def x2File_button():
     tX = entry_num.get().rstrip().replace(";","\n")
     nOw = tStamp().split('.')[0].replace(" ","_").replace(":","_")
-    fNam = str(nam_entry.get()) + "_" + nOw + ".txt"
+    fNam = str(nam_entry.get()).replace(" ","_") + "_" + nOw + ".txt"
     with open(str(fNam), "w") as fIle:
         fIle.write(tX)
     return 0
